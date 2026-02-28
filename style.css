@@ -90,7 +90,7 @@ body {
   font-family: var(--my-font-1);
   line-height: 1.5;
   color: var(--gray-900);
-  background-color: var(--white);
+  background-color: var(--body);
   overflow-x: hidden;
 }
 /*K_----------{  Scrollbar style  }---------- */
@@ -101,10 +101,10 @@ html {
   width: 0.625rem;
 }
 ::-webkit-scrollbar-track {
-  background-color: #ffffff;
+  background-color: var(--body);
 }
 ::-webkit-scrollbar-thumb {
-  background-color: #000;
+  background-color: var(--gray-900);;
 }
 /*y_--------------{  Extra class  }--------------_*/
 .hide {
