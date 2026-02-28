@@ -10,7 +10,7 @@ for (let i = 1; i <= 28; i++) {
   const div = document.createElement("div");
 
   div.innerHTML = `
-      <a href="${isDisabled ? "#" : `./src/day_${day}/index.html`}" 
+      <a href="${isDisabled ? "#" : `./src/day${day}/index.html`}" 
          class="
            flex items-center justify-center gap-2
            p-4 rounded-xl border
