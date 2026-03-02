@@ -29,3 +29,9 @@ for (let i = 1; i <= 28; i++) {
 
   container.appendChild(div);
 }
+
+function copyCode() {
+  const code = document.getElementById("solutionCode").innerText;
+  navigator.clipboard.writeText(code);
+  alert("Code Copied ✅");
+}

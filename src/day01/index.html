@@ -12,11 +12,109 @@
     <link rel="icon" href="../../assets/favicon.png" type="image/x-icon">
 </head>
 
-<body>
-    <h2 class="text-5xl text-red-600 font-bold">Hello Day 01</h2>
+<body class="bg-gray-100 min-h-screen flex items-center justify-center p-6">
+
+    <div class="max-w-4xl w-full bg-white shadow-xl rounded-2xl p-8 space-y-6">
+
+        <!-- Header -->
+        <div class="border-b pb-4">
+            <h1 class="text-4xl font-bold text-red-600">Day 01 - Two Sum</h1>
+            <p class="text-gray-500 mt-2">LeetCode Daily Practice</p>
+        </div>
+
+        <!-- Problem Description -->
+        <div class="space-y-4 text-gray-700 leading-relaxed">
+            <p>
+                Given an array of integers <span class="font-semibold text-blue-600">nums</span>
+                and an integer <span class="font-semibold text-blue-600">target</span>,
+                return indices of the two numbers such that they add up to target.
+            </p>
+
+            <div class="bg-gray-50 p-4 rounded-lg border">
+                <ul class="list-disc ml-6 space-y-2">
+                    <li>You may assume that each input would have exactly one solution.</li>
+                    <li>You may not use the same element twice.</li>
+                    <li>You can return the answer in any order.</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Examples -->
+        <div class="space-y-4">
+            <h2 class="text-2xl font-semibold text-gray-800">Examples</h2>
+
+            <div class="bg-green-50 border-l-4 border-green-500 p-4 rounded">
+                <p class="font-semibold">Example 1:</p>
+                <p>Input: nums = [2,7,11,15], target = 9</p>
+                <p>Output: [0,1]</p>
+                <p class="text-sm text-gray-600">Explanation: nums[0] + nums[1] == 9</p>
+            </div>
+
+            <div class="bg-green-50 border-l-4 border-green-500 p-4 rounded">
+                <p class="font-semibold">Example 2:</p>
+                <p>Input: nums = [3,2,4], target = 6</p>
+                <p>Output: [1,2]</p>
+            </div>
+
+            <div class="bg-green-50 border-l-4 border-green-500 p-4 rounded">
+                <p class="font-semibold">Example 3:</p>
+                <p>Input: nums = [3,3], target = 6</p>
+                <p>Output: [0,1]</p>
+            </div>
+        </div>
+
+        <!-- Constraints -->
+        <div>
+            <h2 class="text-2xl font-semibold text-gray-800 mb-3">Constraints</h2>
+            <div class="bg-yellow-50 border-l-4 border-yellow-500 p-4 rounded">
+                <ul class="list-disc ml-6 space-y-1 text-gray-700">
+                    <li>2 ≤ nums.length ≤ 10⁴</li>
+                    <li>-10⁹ ≤ nums[i] ≤ 10⁹</li>
+                    <li>-10⁹ ≤ target ≤ 10⁹</li>
+                    <li>Only one valid answer exists.</li>
+                </ul>
+            </div>
+        </div>
+        <!-- My Solution Section -->
+        <div class="space-y-4">
+            <h2 class="text-2xl font-semibold text-gray-800">💻 My Solution (JavaScript)</h2>
+
+            <div class="relative">
+                <!-- Copy Button -->
+                <button onclick="copyCode()"
+                    class="absolute top-3 right-3 bg-blue-500 hover:bg-blue-600 text-white text-sm px-3 py-1 rounded-lg shadow">
+                    Copy
+                </button>
+
+                <!-- Code Box -->
+                <pre id="solutionCode"
+                    class="bg-gray-900 text-green-400 p-6 rounded-xl overflow-x-auto text-sm leading-relaxed">
+                    <code>
+
+                    </code>
+                </pre>
+            </div>
+        </div>
+    </div>
 
     <!--I_---------------{  Tailwind CSS CDN  }---------------_-->
     <script src="https://cdn.tailwindcss.com"></script>
+    <!--I_---------------{  My Java Script CDN  }---------------_-->
+    <script src="../../index.js"></script>
 </body>
 
 </html>
+
+<!-- function twoSum(nums, target) {
+    const map = {};
+
+    for (let i = 0; i < nums.length; i++) {
+        const complement = target - nums[i];
+
+        if (map[complement] !== undefined) {
+            return [map[complement], i];
+        }
+
+        map[nums[i]] = i;
+    }
+} -->
