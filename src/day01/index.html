@@ -94,47 +94,31 @@
                 <!-- Code Box -->
                 <pre id="solutionCode"
                     class="bg-gray-900 text-green-400 p-6 rounded-xl overflow-x-auto text-sm leading-relaxed">
-                    <code>
-                        <h2>Practice Result:</h2>
-                        <p id="data"> </p>
-                    </code>
+        <code id="data"></code>
                 </pre>
             </div>
         </div>
     </div>
 
     <script>
-        const Practice = () => {
-            let result;
-            const nums = [2, 6, 9, 11, 13];
-            const target = 11;
-            result = [];
-            for(let i =0 ; i<nums.length; i++){
+        const code =
+        `const Practice = (nums, target) => {
+            let result = [];
+            for (let i = 0; i < nums.length; i++) {
                 const num = nums[i];
-                if(num + nums[i+1] === target){
-                    result.push(i);
-                    result.push(i+1);
-                    break;
+                for (let j = i + 1; j < nums.length; j++) {
+                    const num2 = nums[j];
+                    if (num + num2 === target) {
+                        result.push(i);
+                        result.push(j);
+                    }
                 }
             };
-            const map = {};
-
-            // for (let i = 0; i < nums.length; i++) {
-            //     const complement = target - nums[i];
-
-            //     if (map[complement] !== undefined) {
-            //         return [map[complement], i];
-            //     }
-
-            //     map[nums[i]] = i;
-            // }
             return result;
-        };
-
-        const data = Practice();
+        };`
 
         // HTML e show
-        document.getElementById("data").innerText = "Result : " + data;
+        document.getElementById("data").textContent = code;
     </script>
 
 
