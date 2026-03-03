@@ -19,7 +19,12 @@
         <!-- Header -->
         <div class="border-b pb-4">
             <h1 class="text-4xl font-bold text-red-600">Day 01 - Two Sum</h1>
-            <p class="text-gray-500 mt-2">LeetCode Daily Practice</p>
+            <p class="text-gray-500 text-sm mt-2">
+                LeetCode Daily Practice
+                <span class="ml-1 px-3 py-1 text-xs font-bold rounded-full bg-green-100 text-green-700">
+                    Easy <!-- green yellow red -->
+                </span>
+            </p>
         </div>
 
         <!-- Problem Description -->
@@ -90,12 +95,48 @@
                 <pre id="solutionCode"
                     class="bg-gray-900 text-green-400 p-6 rounded-xl overflow-x-auto text-sm leading-relaxed">
                     <code>
-
+                        <h2>Practice Result:</h2>
+                        <p id="data"> </p>
                     </code>
                 </pre>
             </div>
         </div>
     </div>
+
+    <script>
+        const Practice = () => {
+            let result;
+            const nums = [2, 6, 9, 11, 13];
+            const target = 11;
+            result = [];
+            for(let i =0 ; i<nums.length; i++){
+                const num = nums[i];
+                if(num + nums[i+1] === target){
+                    result.push(i);
+                    result.push(i+1);
+                    break;
+                }
+            };
+            const map = {};
+
+            // for (let i = 0; i < nums.length; i++) {
+            //     const complement = target - nums[i];
+
+            //     if (map[complement] !== undefined) {
+            //         return [map[complement], i];
+            //     }
+
+            //     map[nums[i]] = i;
+            // }
+            return result;
+        };
+
+        const data = Practice();
+
+        // HTML e show
+        document.getElementById("data").innerText = "Result : " + data;
+    </script>
+
 
     <!--I_---------------{  Tailwind CSS CDN  }---------------_-->
     <script src="https://cdn.tailwindcss.com"></script>
