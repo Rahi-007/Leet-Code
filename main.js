@@ -23,24 +23,27 @@
 // // const result = longestCommonPrefix(["carr", "bus", "track"]);
 // const result = longestCommonPrefix(["carr", "ca", "cadde"]);
 // console.log(result);
-// function longestCommonPrefix(strs: string[]): string {
-//   let common: string = strs[0];   // প্রথম string base
-//   for (let i = 1; i < strs.length; i++) {
-//     const next = strs[i];
-//     let temp = "";
-//     for (let j = 0; j < common.length && j < next.length; j++) {
-//       if (common[j] === next[j]) {
-//         temp += common[j];
-//       } else {
-//         break;
-//       }
-//     }
-//     common = temp; // prefix update
-//   }
-//   return common;
-// }
-// const result = longestCommonPrefix(["carr", "bus", "track"]);
-// console.log(result);
+function longestCommonPrefix(strs) {
+    if (!strs || strs.length === 0)
+        return "";
+    var common = strs[0];
+    for (var i = 1; i < strs.length; i++) {
+        var next = strs[i];
+        var temp = "";
+        for (var j = 0; j < common.length && j < next.length; j++) {
+            if (common[j] === next[j]) {
+                temp += common[j];
+            }
+            else {
+                break;
+            }
+        }
+        common = temp;
+    }
+    return common;
+}
+var result = longestCommonPrefix([]);
+console.log(result);
 // function longestCommonPrefix(strs: string[]): string {
 //   let prefix = strs[0];
 //   for (let i = 1; i < strs.length; i++) {
