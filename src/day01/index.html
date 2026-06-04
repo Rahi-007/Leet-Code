@@ -50,7 +50,7 @@
 
         <!-- My Solution Section -->
         <div class="space-y-4">
-            <h2 class="text-2xl font-semibold text-gray-800">💻 My Solution (JavaScript)</h2>
+            <h2 class="text-2xl font-semibold text-gray-800">💻 My Solution (C#)</h2>
 
             <div class="relative">
                 <!-- Copy Button -->
@@ -70,20 +70,20 @@
 
     <script>
     const code =`
-    const Practice = (nums, target) => {
-        let result = [];
-        for (let i = 0; i < nums.length; i++) {
-            const num = nums[i];
-            for (let j = i + 1; j < nums.length; j++) {
-                const num2 = nums[j];
-                if (num + num2 === target) {
-                    result.push(i);
-                    result.push(j);
+    public static int[] ReturnIndex(int[] numbers, int target)
+    {
+        for (int j = 0; j < numbers.Length; j++)
+        {
+            for (int i = j + 1; i < numbers.Length; i++)
+            {
+                if (target == numbers[j] + numbers[i])
+                {
+                    return [j, i];
                 }
             }
-        };
-        return result;
-    };`
+        }
+        return [];
+    }`
 
         // HTML e show
         document.getElementById("data").textContent = code;
