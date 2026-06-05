@@ -1,28 +1,24 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en-us" data-theme="">
 
 <head>
     <!--G_--------------{  Meta Code's  }---------------_-->
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>
-        LeetCode Day 02
-    </title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title> LeetCode Day 03 </title>
     <!--I_---------------{  Added Favicon   }---------------_-->
-    <link rel="icon" href="../../assets/favicon.png" type="image/x-icon">
+    <link rel="icon" href="../../assets/favicon.png" type="image/x-icon" />
 </head>
 
 <body class="bg-gray-100 min-h-screen flex items-center justify-center p-6">
-
     <div class="max-w-4xl w-full bg-white shadow-xl rounded-2xl p-8 space-y-6">
-
         <!-- Header -->
         <div class="border-b pb-4">
-            <h1 class="text-4xl font-bold text-red-600">Day 02 - Longest Common Prefix</h1>
+            <h1 class="text-4xl font-bold text-red-600">Day 03 - Add Two Numbers</h1>
             <p class="text-gray-500 text-sm mt-2">
                 LeetCode Daily Practice
-                <span class="ml-1 px-3 py-1 text-xs font-bold rounded-full bg-green-100 text-green-700">
-                    Easy
+                <span class="ml-1 px-3 py-1 text-xs font-bold rounded-full bg-yellow-100 text-yellow-700">
+                    Medium
                 </span>
             </p>
         </div>
@@ -30,12 +26,13 @@
         <!-- Problem Description -->
         <div class="space-y-4 text-gray-700 leading-relaxed">
             <p>
-                Write a function to find the longest common prefix string amongst an array of strings.
+                You are given two non-empty linked lists representing two non-negative integers. The digits are stored
+                in reverse order, and each of their nodes contains a single digit. Add the two numbers and return the
+                sum as a linked list.
             </p>
             <p>
-                If there is no common prefix, return an empty string <span class="font-semibold text-blue-600"> ""
-                </span>
-            </p>           
+                You may assume the two numbers do not contain any leading zero, except the number 0 itself.
+            </p>
         </div>
 
         <!-- Examples -->
@@ -43,14 +40,14 @@
             <h2 class="text-2xl font-semibold text-gray-800">Examples</h2>
             <div class="bg-green-50 border-l-4 border-green-500 p-4 rounded">
                 <p class="font-semibold">Example 1:</p>
-                <p>Input: strs = ["flower","flow","flight"]</p>
-                <p>Output: "fl"</p>
+                <p>Input: L1 = [2,4,3], L2 = [5,6,4]</p>
+                <p>Output: [7,0,8]</p>
+                <p class="text-sm text-gray-600">Explanation: 342 + 465 = 807</p>
             </div>
             <div class="bg-green-50 border-l-4 border-green-500 p-4 rounded">
                 <p class="font-semibold">Example 2:</p>
-                <p>Input: strs = ["dog","racecar","car"]</p>
-                <p>Output: ""</p>
-                <p class="text-sm text-gray-600">Explanation: There is no common prefix among the input strings.</p>
+                <p>Input: l1 = [0], l2 = [0]</p>
+                <p>Output: [0]</p>
             </div>
         </div>
 
@@ -76,12 +73,14 @@
 
     <script>
         const code = `
-        function longestCommonPrefix(strs: string[]): string {
-
-        };`
+    public class Solution {
+        public ListNode AddTwoNumbers(ListNode l1, ListNode l2) {
+        
+        }
+    }`;
 
         // HTML e show
-        document.getElementById("data").textContent = code;    
+        document.getElementById("data").textContent = code;
     </script>
 
     <!--I_---------------{  Tailwind CSS CDN  }---------------_-->

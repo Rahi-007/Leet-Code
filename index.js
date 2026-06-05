@@ -2,7 +2,7 @@
 // <!--W_---------------{  Last Update  : 28/02/2026  }---------------_-->
 
 const container = document.getElementById("days");
-const currentDay = 2;
+const currentDay = 3;
 
 for (let i = 1; i <= 28; i++) {
   const isDisabled = i > currentDay;
