@@ -5,7 +5,7 @@
     <!--G_--------------{  Meta Code's  }---------------_-->
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title> LeetCode Day 04 </title>
+    <title> LeetCode Day 03 </title>
     <!--I_---------------{  Added Favicon   }---------------_-->
     <link rel="icon" href="../../assets/favicon.png" type="image/x-icon" />
 </head>
@@ -14,11 +14,11 @@
     <div class="max-w-4xl w-full bg-white shadow-xl rounded-2xl p-8 space-y-6">
         <!-- Header -->
         <div class="border-b pb-4">
-            <h1 class="text-4xl font-bold text-red-600">Day 04 - Roman to Integer</h1>
+            <h1 class="text-4xl font-bold text-red-600">Day 03 - Add Two Numbers</h1>
             <p class="text-gray-500 text-sm mt-2">
                 LeetCode Daily Practice
-                <span class="ml-1 px-3 py-1 text-xs font-bold rounded-full bg-green-100 text-green-700">
-                    Easy
+                <span class="ml-1 px-3 py-1 text-xs font-bold rounded-full bg-yellow-100 text-yellow-700">
+                    Medium
                 </span>
             </p>
         </div>
@@ -26,17 +26,12 @@
         <!-- Problem Description -->
         <div class="space-y-4 text-gray-700 leading-relaxed">
             <p>
-                Roman numerals are represented by seven different symbols: I, V, X, L, C, D and M.
+                You are given two non-empty linked lists representing two non-negative integers. The digits are stored
+                in reverse order, and each of their nodes contains a single digit. Add the two numbers and return the
+                sum as a linked list.
             </p>
             <p>
-                Symbol & Value <br>
-                I = 1 <br>
-                V = 5 <br>
-                X = 10 <br>
-                L = 50 <br>
-                C = 100 <br>
-                D = 500 <br>
-                M = 1000 <br>
+                You may assume the two numbers do not contain any leading zero, except the number 0 itself.
             </p>
         </div>
 
@@ -45,15 +40,14 @@
             <h2 class="text-2xl font-semibold text-gray-800">Examples</h2>
             <div class="bg-green-50 border-l-4 border-green-500 p-4 rounded">
                 <p class="font-semibold">Example 1:</p>
-                <p>Input: s = "III"</p>
-                <p>Output: 3</p>
-                <p class="text-sm text-gray-600">Explanation: III = 3</p>
+                <p>Input: L1 = [2,4,3], L2 = [5,6,4]</p>
+                <p>Output: [7,0,8]</p>
+                <p class="text-sm text-gray-600">Explanation: 342 + 465 = 807</p>
             </div>
             <div class="bg-green-50 border-l-4 border-green-500 p-4 rounded">
                 <p class="font-semibold">Example 2:</p>
-                <p>Input: s = "MCMXCIV"</p>
-                <p>Output: 1994</p>
-                <p class="text-sm text-gray-600">M = 1000, CM = 900, XC = 90 and IV = 4</p>
+                <p>Input: l1 = [0], l2 = [0]</p>
+                <p>Output: [0]</p>
             </div>
         </div>
 
@@ -80,37 +74,8 @@
     <script>
         const code = `
     public class Solution {
-        public int RomanToInt(string s)
-        {
-            Dictionary<char, int> romanNumbers = new()
-            {
-                { 'I', 1 },
-                { 'V', 5 },
-                { 'X', 10 },
-                { 'L', 50 },
-                { 'C', 100 },
-                { 'D', 500 },
-                { 'M', 1000 }
-            };
-
-            int total = 0;
-            int length = s.Length;
-
-            for (int i = 0; i < length; i++)
-            {
-                int current = romanNumbers[s[i]];
-
-                if (i + 1 < length && current < romanNumbers[s[i + 1]])
-                {
-                    total -= current;
-                }
-                else
-                {
-                    total += current;
-                }
-            }
-
-            return total;
+        public ListNode AddTwoNumbers(ListNode l1, ListNode l2) {
+        
         }
     }`;
 
