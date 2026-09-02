@@ -5,7 +5,7 @@
     <!--G_--------------{  Meta Code's  }---------------_-->
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title> LeetCode Day 05 </title>
+    <title> LeetCode Day 03 </title>
     <!--I_---------------{  Added Favicon   }---------------_-->
     <link rel="icon" href="../../assets/favicon.png" type="image/x-icon" />
 </head>
@@ -14,7 +14,7 @@
     <div class="max-w-4xl w-full bg-white shadow-xl rounded-2xl p-8 space-y-6">
         <!-- Header -->
         <div class="border-b pb-4">
-            <h1 class="text-4xl font-bold text-red-600">Day 05 - Integer to Roman</h1>
+            <h1 class="text-4xl font-bold text-red-600">Day 03 - Add Two Numbers</h1>
             <p class="text-gray-500 text-sm mt-2">
                 LeetCode Daily Practice
                 <span class="ml-1 px-3 py-1 text-xs font-bold rounded-full bg-yellow-100 text-yellow-700">
@@ -26,29 +26,12 @@
         <!-- Problem Description -->
         <div class="space-y-4 text-gray-700 leading-relaxed">
             <p>
-                Symbol Value <br>
-                I = 1 <br>
-                V = 5 <br>
-                X = 10 <br>
-                L = 50 <br>
-                C = 100 <br>
-                D = 500 <br>
-                M = 1000 <br>
+                You are given two non-empty linked lists representing two non-negative integers. The digits are stored
+                in reverse order, and each of their nodes contains a single digit. Add the two numbers and return the
+                sum as a linked list.
             </p>
             <p>
-                If the value does not start with 4 or 9, select the symbol of the maximal value that can be subtracted
-                from the input, append that symbol to the result, subtract its value, and convert the remainder to a
-                Roman numeral.
-            </p>
-            <p>
-                If the value starts with 4 or 9 use the subtractive form representing one symbol subtracted from the
-                following symbol, for example, 4 is 1 (I) less than 5 (V): IV and 9 is 1 (I) less than 10 (X): IX. Only
-                the following subtractive forms are used: 4 (IV), 9 (IX), 40 (XL), 90 (XC), 400 (CD) and 900 (CM).
-            </p>
-            <p>
-                Only powers of 10 (I, X, C, M) can be appended consecutively at most 3 times to represent multiples of
-                10. You cannot append 5 (V), 50 (L), or 500 (D) multiple times. If you need to append a symbol 4 times
-                use the subtractive form.
+                You may assume the two numbers do not contain any leading zero, except the number 0 itself.
             </p>
         </div>
 
@@ -57,23 +40,14 @@
             <h2 class="text-2xl font-semibold text-gray-800">Examples</h2>
             <div class="bg-green-50 border-l-4 border-green-500 p-4 rounded">
                 <p class="font-semibold">Example 1:</p>
-                <p>Input: num = 58</p>
-                <p>Output: "LVIII"</p>
-                <p class="text-sm text-gray-600">Explanation: <br>
-                    50 = L <br>
-                    8 = VIII
-                </p>
+                <p>Input: L1 = [2,4,3], L2 = [5,6,4]</p>
+                <p>Output: [7,0,8]</p>
+                <p class="text-sm text-gray-600">Explanation: 342 + 465 = 807</p>
             </div>
             <div class="bg-green-50 border-l-4 border-green-500 p-4 rounded">
                 <p class="font-semibold">Example 2:</p>
-                <p>Input: num = 1994</p>
-                <p>Output: "MCMXCIV"</p>
-                <p class="text-sm text-gray-600">Explanation: <br>
-                    1000 = M <br>
-                    900 = CM <br>
-                    90 = XC <br>
-                    4 = IV <br>
-                </p>
+                <p>Input: l1 = [0], l2 = [0]</p>
+                <p>Output: [0]</p>
             </div>
         </div>
 
@@ -100,30 +74,8 @@
     <script>
         const code = `
     public class Solution {
-        public string IntToRoman(int num)
-        {
-            string result = "";
-            int[] romanNumbersValue = [
-                1000, 900, 500, 400,
-                100, 90, 50, 40,
-                10, 9, 5, 4, 1
-            ];
-            string[] romanNumbersSymbol = [
-                "M", "CM", "D", "CD",
-                "C", "XC", "L", "XL",
-                "X", "IX", "V", "IV", "I"
-            ];
-
-            for (int i = 0; i < romanNumbersValue.Length; i++)
-            {
-                while (num >= romanNumbersValue[i])
-                {
-                    result += romanNumbersSymbol[i];
-                    num -= romanNumbersValue[i];
-                }
-            }
-
-            return result;
+        public ListNode AddTwoNumbers(ListNode l1, ListNode l2) {
+        
         }
     }`;
 
