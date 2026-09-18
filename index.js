@@ -1,8 +1,8 @@
 // <!--W_---------------{  Create  Date : 28/02/2026  }---------------_-->
-// <!--W_---------------{  Last Update  : 05/09/2026  }---------------_-->
+// <!--W_---------------{  Last Update  : 19/09/2026  }---------------_-->
 
 const container = document.getElementById("days");
-const currentDay = 7;
+const currentDay = 8;
 
 for (let i = 1; i <= 28; i++) {
   const isDisabled = i > currentDay;
